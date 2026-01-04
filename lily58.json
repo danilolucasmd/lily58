@@ -3,7 +3,7 @@
   "notes": "",
   "version": 1,
   "keyboard": "lily58/rev1",
-  "keymap": "lily58_rev1_layout_2025-12-31",
+  "keymap": "lily58",
   "layout": "LAYOUT",
   "layers": [
     [
@@ -57,14 +57,14 @@
       "KC_DOT",
       "KC_SLSH",
       "KC_RSFT",
-      "KC_NO",
+      "KC_LCTL",
       "KC_LGUI",
       "KC_LALT",
       "LT(1,KC_SPC)",
       "KC_SPC",
       "KC_BSPC",
       "KC_ENT",
-      "KC_NO"
+      "MO(1)"
     ],
     [
       "KC_NO",
@@ -123,8 +123,8 @@
       "KC_NO",
       "KC_NO",
       "KC_DEL",
-      "KC_NO",
-      "KC_NO"
+      "KC_TRNS",
+      "KC_TRNS"
     ]
   ],
   "author": ""
