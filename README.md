@@ -7,8 +7,7 @@ The Lily58 is a column-staggered split mechanical keyboard featuring a 6×4 layo
 ## Layers
 
 ### Layer 1
-<img width="901" height="326" alt="image" src="https://github.com/user-attachments/assets/6a8f4273-6443-4ccb-b1ae-63345d7d74e5" />
+<img width="707" height="255" alt="image" src="https://github.com/user-attachments/assets/50a3d7c2-4959-43c3-94c9-5ae6b294c485" />
 
 ### Layer 2
-<img width="903" height="327" alt="image" src="https://github.com/user-attachments/assets/aa35a57e-c46b-486a-a2f6-8c9a1498a4a8" />
-
+<img width="708" height="255" alt="image" src="https://github.com/user-attachments/assets/dbd49fad-b2e5-4552-b328-4f0e19a0cb51" />
