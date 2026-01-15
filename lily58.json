@@ -60,9 +60,9 @@
       "MO(1)",
       "KC_LGUI",
       "LALT_T(KC_SPC)",
-      "KC_ENT",
+      "LT(1,KC_BSPC)",
       "KC_SPC",
-      "KC_BSPC",
+      "KC_ENT",
       "KC_DEL",
       "MO(1)"
     ],
@@ -122,7 +122,7 @@
       "KC_NO",
       "KC_NO",
       "KC_NO",
-      "KC_DEL",
+      "KC_NO",
       "KC_TRNS",
       "KC_TRNS"
     ]
