@@ -2,7 +2,7 @@
 
 This repository contains everything related to my Lily58 keyboard build. It includes the custom keymap, QMK firmware configuration, build notes, and any additional files or documentation relevant to this setup.
 
-The Lily58 is a column-staggered split mechanical keyboard featuring a 6×4 layout per half, plus an additional 4 thumb keys. It is designed with ergonomics in mind, offering a more natural typing position and improved comfort during long typing sessions.
+The Lily58 is a column-staggered ortholinear split mechanical keyboard featuring a 6×4 layout per half, plus an additional 4 thumb keys. It is designed with ergonomics in mind, offering a more natural typing position and improved comfort during long typing sessions.
 
 ## Layers
 
