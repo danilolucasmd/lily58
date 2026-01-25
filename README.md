@@ -1,14 +1,19 @@
-## Lily58 Keyboard Build
+g## Lily58 Keyboard Build
 
 This repository contains everything related to my Lily58 keyboard build. It includes the custom keymap, QMK firmware configuration, build notes, and any additional files or documentation relevant to this setup.
 
 The Lily58 is a column-staggered ortholinear split mechanical keyboard featuring a 6×4 layout per half, plus an additional 4 thumb keys. It is designed with ergonomics in mind, offering a more natural typing position and improved comfort during long typing sessions.
 
 ## Firmware flash
-- Go to the [QMK configurator](https://config.qmk.fm/), compile the firmware and download it.
-- Run the flash command using `avrdude`
+- Clone the [official qmk firmware](https://github.com/qmk/qmk_firmware), and setup `qmk` cli.
+- Override the `keyboards/lily58/keymaps/default` dir with the content of the `keymaps/defualt` of this repo.
+- Compile the firmware
 ```bash
-sudo avrdude -v -p atmega32u4 -c avr109 -P /dev/ttyACM0 -b 57600 -D -U flash:w:/home/danilolucasmd/Downloads/lily58_rev1_lily58.hex:i
+qmk compile -kb lily58 -km default
+```
+- Flash the firmware (on both sides)
+```bash
+qmk flash -kb lily58 -km default
 ```
 
 ## Layers
