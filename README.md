@@ -4,7 +4,7 @@ This repository contains everything related to my Lily58 keyboard build. It incl
 
 The Lily58 is a column-staggered ortholinear split mechanical keyboard featuring a 6×4 layout per half, plus an additional 4 thumb keys. It is designed with ergonomics in mind, offering a more natural typing position and improved comfort during long typing sessions.
 
-## Flashing the firmware
+## Firmware
 - Clone the [official qmk firmware](https://github.com/qmk/qmk_firmware), and setup `qmk` cli.
 - Override the `keyboards/lily58/keymaps/default` dir with the content of the `keymaps/defualt` of this repo.
 - Compile the firmware
