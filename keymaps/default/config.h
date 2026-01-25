@@ -20,12 +20,18 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #pragma once
 
-/* Select hand configuration */
-
+// Select hand configuration
+#define SPLIT_USB_DETECT
 #define MASTER_LEFT
-// #define MASTER_RIGHT
-// #define EE_HANDS
+
+// Split ajust
+#define SPLIT_USB_TIMEOUT 2000
+#define SPLIT_WATCHDOG_ENABLE
+#define SPLIT_WATCHDOG_TIMEOUT 3000
+
+// Oled config
 #define SPLIT_WPM_ENABLE
-// #define TAPPING_FORCE_HOLD
+#define TAPPING_FORCE_HOLD
 #define QUICK_TAP_TERM 0
 #define TAPPING_TERM 200
+#define WPM_SAMPLE_SECONDS 1
