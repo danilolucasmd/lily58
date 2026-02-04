@@ -18,6 +18,16 @@ qmk compile -kb lily58 -km default
 qmk flash -kb lily58 -km default
 ```
 
+## Hardware
+- Wired version
+  - ProMicro atmega32u4 (Arduino)
+  - OLED ssd1306
+- Wireless version
+  - ProMicro nrf52840 (nice!nano clone)
+  - LI-ion battery 301230 (110mah)
+
+(You need **two** of each component above, one for each haft of the keyboard)
+
 ## Layers
 
 ### Layer 0 (Normal)
