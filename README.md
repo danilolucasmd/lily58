@@ -27,10 +27,10 @@ qmk flash -kb lily58 -km default
 - (Optional) If you want to clear all bt profiles and start fresh. Copy over the `reset` firmware to both halves of the keyboard. Repeat the steps above.
 
 ## Hardware
-- Wired version
+- Wired version (QMK)
   - ProMicro atmega32u4 (Arduino)
   - OLED ssd1306
-- Wireless version
+- Wireless version (ZMK)
   - ProMicro nrf52840 (nice!nano clone)
   - LI-ion battery 301230 (110mah)
 
