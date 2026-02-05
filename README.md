@@ -33,6 +33,12 @@ qmk flash -kb lily58 -km default
 - Wireless version (ZMK)
   - ProMicro nrf52840 (nice!nano clone)
   - LI-ion battery 301230 (110mah)
+- 3D printed case
+  - [Gabbajoe printables](https://www.printables.com/model/625411-lily58-keyboard-high-profile-case)
+- 3D printed plate (Just got the plate from this project)
+  - [kooziecup printables](https://www.printables.com/model/730538-aurora-lily58-mx-style-switch-case)
+- 3D printed keycaps (The outer key of the thumb cluster on both halves)
+  - [Scottokebs repo](https://github.com/joe-scotto/scottokeeb)
 
 (You need **two** of each component above, one for each haft of the keyboard)
 
