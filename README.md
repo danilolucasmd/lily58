@@ -38,7 +38,7 @@ qmk flash -kb lily58 -km default
 
 ## Layers
 ### QMK
-#### Base
+#### Base (Default)
 <img width="854" height="308" alt="image" src="https://github.com/user-attachments/assets/24d73fe3-b742-41aa-9717-8546eeffbacb" />
 
 #### Lower (Arrow keys & Symbols)
@@ -48,7 +48,7 @@ qmk flash -kb lily58 -km default
 <img width="858" height="307" alt="image" src="https://github.com/user-attachments/assets/f5e2c4ed-e8db-47a6-9a65-606838cb4bc1" />
 
 ### ZMK
-#### Base
+#### Base (Default)
 <img width="1060" height="437" alt="image" src="https://github.com/user-attachments/assets/60e41208-da63-4664-8f5e-10e586d5ab74" />
 
 #### Lower (Arrow keys & Symbols)
