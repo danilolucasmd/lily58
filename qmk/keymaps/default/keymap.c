@@ -19,9 +19,9 @@ uint8_t current_tap_frame = 0;
 static long int oled_timeout = 60000; // 1 minute
 
 enum layer_number {
-    _LAYER0 = 0,
-    _LAYER1,
-    _LAYER2,
+    _BASE = 0,
+    _LOWER,
+    _RAISE,
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -40,7 +40,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *                   |      |        |      |         |       |       |      |      |
     *                   `----------------------------'           '--------------------'
     */
-    [_LAYER0] = LAYOUT(
+    [_BASE] = LAYOUT(
         KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
         KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS,
         LCTL_T(KC_ESC), KC_A, KC_S, KC_D, KC_F, KC_G,                           KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *                   |      |      |      |         |       |      |      |      |
     *                   `----------------------------'           '--------------------'
     */
-    [_LAYER1] = LAYOUT(
+    [_LOWER] = LAYOUT(
         KC_TRNS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                     KC_TRNS, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_EQL,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS, KC_PGUP, KC_TRNS, KC_TRNS, KC_UP,   KC_PLUS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_PGDN, KC_TRNS, KC_TRNS,                   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TRNS, KC_TRNS,
@@ -84,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     *                   |      |      |      |         |       |       |      |      |
     *                   `----------------------------'           '--------------------'
     */
-    [_LAYER2] = LAYOUT(
+    [_RAISE] = LAYOUT(
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS, MS_WHLU, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, MS_WHLD, KC_TRNS, KC_TRNS,                   MS_LEFT, MS_DOWN, MS_UP,   MS_RGHT, KC_TRNS, KC_TRNS,
@@ -92,10 +92,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MS_BTN1, MS_BTN2, KC_TRNS, KC_TRNS
     )
 };
-
-layer_state_t layer_state_set_user(layer_state_t state) {
-  return update_tri_layer_state(state, _LAYER0, _LAYER1, _LAYER2);
-}
 
 //
 // Rotate OLED display
@@ -129,9 +125,9 @@ static void render_status(void) {
 
     switch (get_highest_layer(layer_state)) {
         case 2:
-	    oled_write_P(PSTR("RAISE"), false);
-	    break;
-	// Layer 1
+            oled_write_P(PSTR("RAISE"), false);
+            break;
+        // Layer 1
         case 1:
             oled_write_P(PSTR("LOWER"), false);
             break;
