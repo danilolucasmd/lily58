@@ -25,6 +25,7 @@ enum layer_number {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+
     /* LAYER0 (Base)
     * ,-----------------------------------------.                    ,-----------------------------------------.
     * |  `   |  1   |  2   |  3   |  4   |  5   |                    |  6   |  7   |  8   |  9   |  0   |  -   |
@@ -33,62 +34,62 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
     * |Ctl/E |  A   |  S   |  D   |  F   |  G   |-------.    ,-------|  H   |  J   |  K   |  L   |  ;   |  '   |
     * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
-    * |Shift |  Z   |  X   |  C   |  V   |  B   |-------|    |-------|  N   |  M   |  ,   |  .   |  /   |Shift |
+    * |Shift |  Z   |  X   |  C   |  V   |  B   |  [    |    |   ]   |  N   |  M   |  ,   |  .   |  /   |Shift |
     * `-----------------------------------------/       /     \      \-----------------------------------------'
-    *                   | MO2  | GUI  |Alt/SP| BSPC/L1 |       | Enter | Del  | MO1  |
-    *                   |      |      |      |         |       |       |      |      |
+    *                   | MO2  | GUI/SP | Alt  | BSPC/L1 | Space | Enter | Del  | MO1  |
+    *                   |      |        |      |         |       |       |      |      |
     *                   `----------------------------'           '--------------------'
     */
     [_LAYER0] = LAYOUT(
-    KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
-    KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS,
-    LCTL_T(KC_ESC), KC_A, KC_S, KC_D,   KC_F,    KC_G,                      KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-    KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_NO,   KC_NO,   KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-                                MO(2),   KC_LGUI, LALT_T(KC_SPC), LT(1,KC_BSPC), KC_SPC, KC_ENT, KC_DEL, MO(1)
+        KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                      KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
+        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS,
+        LCTL_T(KC_ESC), KC_A, KC_S, KC_D, KC_F, KC_G,                           KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LBRC, KC_RBRC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
+                                MO(2), LGUI_T(KC_SPC), KC_LALT, LT(1,KC_BSPC), KC_SPC, KC_ENT, KC_DEL, MO(1)
     ),
 
-    /* LAYER1 (Nav / Media)
+    /* LAYER1 (Nav / Media / Symbols)
     * ,-----------------------------------------.                    ,-----------------------------------------.
-    * |      |      |      |      |      |      |                    |  [   |  ]   |  {   |  }   |  =   |      |
+    * | TRNS | F1   | F2   | F3   | F4   | F5   |                    |  [   |  ]   |  {   |  }   |  =   |      |
     * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-    * |      |      |      |      |      |      |                    | PgUp |      |      |  Up  |  +   |      |
+    * | TRNS |      |      |      |      |      |                    | PgUp |      |      |  Up  |  +   |      |
     * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-    * | Ctrl |      |      | PgDn |      |      |-------.    ,-------| Left | Down |  Up  |Right |      |      |
+    * | TRNS |      |      | PgDn |      |      |-------.    ,-------| Left | Down |  Up  |Right |      |      |
     * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
-    * |Shift |      |      |      |      |      |-------|    |-------| Down | Mute | Vol- | Vol+ |      |Shift |
+    * | TRNS |      |      |      |      |      |      |    |       |      | Mute | Vol- | Vol+ |      |      |
     * `-----------------------------------------/       /     \      \-----------------------------------------'
-    *                   | TRNS |      |      |         |       | Enter |      | TRNS |
-    *                   |      |      |      |         |       |       |      |      |
+    *                   | TRNS |      |      |         |       |      |      | TRNS |
+    *                   |      |      |      |         |       |      |      |      |
     *                   `----------------------------'           '--------------------'
     */
     [_LAYER1] = LAYOUT(
-    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                     KC_NO,   KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_EQL,
-    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                     KC_NO,   KC_PGUP, KC_NO,   KC_NO,   KC_UP,   KC_PLUS,
-    KC_LCTL, KC_NO,   KC_NO,   KC_PGDN, KC_NO,   KC_NO,                     KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_NO,   KC_NO,
-    KC_LSFT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_DOWN, KC_MUTE, KC_VOLD, KC_VOLU, KC_NO,   KC_RSFT,
-                                KC_TRNS, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_ENT,  KC_NO,   KC_TRNS
+        KC_TRNS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                     KC_TRNS, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_EQL,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS, KC_PGUP, KC_TRNS, KC_TRNS, KC_UP,   KC_PLUS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_PGDN, KC_TRNS, KC_TRNS,                   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS,
+                                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     ),
 
     /* LAYER2 (Mouse)
     * ,-----------------------------------------.                    ,-----------------------------------------.
-    * |      |      |      |      |      |      |                    |      |      |      |      |      |      |
+    * | TRNS | TRNS | TRNS | TRNS | TRNS | TRNS |                    | TRNS | TRNS | TRNS | TRNS | TRNS | TRNS |
     * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-    * |      |      |      |      |      |      |                    | WhUp |      |      |      |      |      |
+    * | TRNS | TRNS | TRNS | TRNS | TRNS | TRNS |                    | WhUp |      |      |      |      |      |
     * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
-    * |      |      |      | WhDn | WhR  |      |-------.    ,-------| Left | Down |  Up  |Right |      |      |
+    * | TRNS | TRNS | TRNS | WhDn |      |      |-------.    ,-------| Left | Down |  Up  |Right |      |      |
     * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
-    * |      |      |      |      |      |      |-------|    |-------| WhL  |      |      |      |      |      |
+    * | TRNS | TRNS | TRNS | TRNS | TRNS | TRNS |      |    |       |      |      |      |      |      |      |
     * `-----------------------------------------/       /     \      \-----------------------------------------'
     *                   | TRNS |      |      |         | Btn1 | Btn2 |      |      |
     *                   |      |      |      |         |       |       |      |      |
     *                   `----------------------------'           '--------------------'
     */
     [_LAYER2] = LAYOUT(
-    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                     KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
-    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,                     KC_NO,   MS_WHLU, KC_NO,   KC_NO,   KC_NO,   KC_NO,
-    KC_NO,   KC_NO,   KC_NO,   MS_WHLD, MS_WHLR, KC_NO,                     MS_LEFT, MS_DOWN, MS_UP,   MS_RGHT, KC_NO,   KC_NO,
-    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   MS_WHLL, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
-                                KC_NO,   KC_NO,   KC_TRNS, KC_NO,   KC_NO,   MS_BTN1, MS_BTN2, KC_NO
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS, MS_WHLU, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, MS_WHLD, KC_TRNS, KC_TRNS,                   MS_LEFT, MS_DOWN, MS_UP,   MS_RGHT, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
+                                KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, MS_BTN1, MS_BTN2, KC_TRNS, KC_TRNS
     )
 };
 
