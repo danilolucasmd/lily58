@@ -37,12 +37,23 @@ qmk flash -kb lily58 -km default
 (You need **two** of each component above, one for each haft of the keyboard)
 
 ## Layers
-
-### Layer 0 (Base)
+### QMK
+#### Base
 <img width="854" height="308" alt="image" src="https://github.com/user-attachments/assets/24d73fe3-b742-41aa-9717-8546eeffbacb" />
 
-### Layer 1 (Arrow keys & Symbols)
+#### Lower (Arrow keys & Symbols)
 <img width="858" height="309" alt="image" src="https://github.com/user-attachments/assets/f4f9e3f1-d87a-4a79-844e-e96ed505f349" />
 
-### Layer 2 (Mouse)
+#### Raise (Mouse)
 <img width="858" height="307" alt="image" src="https://github.com/user-attachments/assets/f5e2c4ed-e8db-47a6-9a65-606838cb4bc1" />
+
+### ZMK
+#### Base
+<img width="1060" height="437" alt="image" src="https://github.com/user-attachments/assets/60e41208-da63-4664-8f5e-10e586d5ab74" />
+
+#### Lower (Arrow keys & Symbols)
+<img width="1059" height="437" alt="image" src="https://github.com/user-attachments/assets/86e27636-5b89-4e03-b7c6-4f1f657c5f97" />
+
+#### Raise (Mouse)
+<img width="1071" height="448" alt="image" src="https://github.com/user-attachments/assets/540d0863-e164-41cb-991f-7aa6d9c5ec0c" />
+
