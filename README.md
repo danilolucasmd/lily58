@@ -7,6 +7,7 @@ The Lily58 is a column-staggered ortholinear split mechanical keyboard featuring
 ![20260204_105359](https://github.com/user-attachments/assets/d0d8aff7-7c34-476c-9130-1e7ceed3ec32)
 
 ## Firmware
+#### QMK
 - Clone the [official qmk firmware](https://github.com/qmk/qmk_firmware), and setup `qmk` cli.
 - Override the `keyboards/lily58/keymaps/default` dir with the content of the `keymaps/defualt` of this repo.
 - Compile the firmware
@@ -17,6 +18,13 @@ qmk compile -kb lily58 -km default
 ```bash
 qmk flash -kb lily58 -km default
 ```
+#### ZMK
+- Download the firmware [here](https://github.com/danilolucasmd/lily58-wireless-view-zmk-config/actions).
+- Connect the left haft of the keyboard to the computer via the usb-c port.
+- Press the rest button twice.
+- Copy the the `left` haft of the firmware to the `nicenano` drive.
+- Disconnect the usb-c, and repeat for the right haft.
+- (Optional) If you want to clear all bt profiles and start fresh. Copy over the `reset` firmware to both halves of the keyboard. Repeat the steps above.
 
 ## Hardware
 - Wired version
