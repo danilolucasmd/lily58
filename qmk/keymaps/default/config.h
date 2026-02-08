@@ -31,7 +31,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 // Oled config
 #define SPLIT_WPM_ENABLE
-#define TAPPING_FORCE_HOLD
-#define QUICK_TAP_TERM 0
-#define TAPPING_TERM 200
 #define WPM_SAMPLE_SECONDS 1
+
+// TAP setup
+#define TAPPING_TERM 200
+#define HOLD_ON_OTHER_KEY_PRESS
+#define QUICK_TAP_TERM 0
