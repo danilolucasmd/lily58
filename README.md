@@ -58,7 +58,7 @@ qmk flash -kb lily58 -km default
 <img width="1060" height="437" alt="image" src="https://github.com/user-attachments/assets/60e41208-da63-4664-8f5e-10e586d5ab74" />
 
 #### Lower (Arrow keys & Symbols)
-<img width="1059" height="437" alt="image" src="https://github.com/user-attachments/assets/86e27636-5b89-4e03-b7c6-4f1f657c5f97" />
+<img width="1061" height="438" alt="image" src="https://github.com/user-attachments/assets/0a87061e-6e26-4f43-bf90-16b470e1a9de" />
 
 #### Raise (Mouse)
 <img width="1071" height="448" alt="image" src="https://github.com/user-attachments/assets/540d0863-e164-41cb-991f-7aa6d9c5ec0c" />
