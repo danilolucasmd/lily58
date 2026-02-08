@@ -83,7 +83,7 @@
 
             label = "Lower";
             bindings = <
-&trans  &trans  &trans  &trans         &trans  &trans                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp EQUAL
+&trans  &kp F1  &kp F2  &kp F3         &kp F4  &kp F5                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE   &kp RIGHT_BRACE  &kp EQUAL
 &trans  &trans  &trans  &trans         &trans  &trans                    &trans          &kp PAGE_UP       &trans             &trans           &trans           &kp PLUS
 &trans  &trans  &trans  &kp PAGE_DOWN  &trans  &trans                    &kp LEFT_ARROW  &kp DOWN_ARROW    &kp UP_ARROW       &kp RIGHT_ARROW  &trans           &trans
 &trans  &trans  &trans  &trans         &trans  &trans  &trans    &trans  &trans          &kp K_MUTE        &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans           &trans
