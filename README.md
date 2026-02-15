@@ -51,7 +51,7 @@ qmk flash -kb lily58 -km default
 <img width="858" height="309" alt="image" src="https://github.com/user-attachments/assets/f4f9e3f1-d87a-4a79-844e-e96ed505f349" />
 
 #### Raise (Mouse)
-<img width="858" height="307" alt="image" src="https://github.com/user-attachments/assets/f5e2c4ed-e8db-47a6-9a65-606838cb4bc1" />
+<img width="854" height="307" alt="image" src="https://github.com/user-attachments/assets/17bf9ac8-61f7-4b27-8846-27be37aa68cd" />
 
 ### ZMK
 #### Base (Default)
@@ -61,5 +61,4 @@ qmk flash -kb lily58 -km default
 <img width="1061" height="438" alt="image" src="https://github.com/user-attachments/assets/0a87061e-6e26-4f43-bf90-16b470e1a9de" />
 
 #### Raise (Mouse)
-<img width="1071" height="448" alt="image" src="https://github.com/user-attachments/assets/540d0863-e164-41cb-991f-7aa6d9c5ec0c" />
-
+<img width="1057" height="430" alt="image" src="https://github.com/user-attachments/assets/decd2d82-b504-4767-9bc7-ad3d4d7a5da9" />
