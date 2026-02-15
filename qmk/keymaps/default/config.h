@@ -36,7 +36,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // TAP setup
 #define TAPPING_TERM 200
 #define HOLD_ON_OTHER_KEY_PRESS
-#define QUICK_TAP_TERM 0
 
 // Caps Word
 #define DOUBLE_TAP_SHIFT_TURNS_ON_CAPS_WORD
