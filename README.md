@@ -19,7 +19,7 @@ qmk compile -kb lily58 -km default
 qmk flash -kb lily58 -km default
 ```
 #### ZMK
-- Download the firmware [here](https://github.com/danilolucasmd/lily58-wireless-view-zmk-config/actions).
+- Download the firmware [here](https://github.com/danilolucasmd/lily58/actions).
 - Connect the left haft of the keyboard to the computer via the usb-c port.
 - Press the rest button twice.
 - Copy the the `left` haft of the firmware to the `nicenano` drive.
