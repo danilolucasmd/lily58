@@ -43,7 +43,7 @@ qmk flash -kb lily58 -km default
 (You need **two** of each component above, one for each haft of the keyboard)
 
 ## Animations
-- You can find the animations here: https://github.com/mctechnology17/zmk-nice-oled
+- [zmk-nice-oled](https://github.com/mctechnology17/zmk-nice-oled)
 
 ## Layers
 ### QMK
