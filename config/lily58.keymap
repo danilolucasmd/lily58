@@ -62,13 +62,14 @@
             bindings = <&kp LCTRL>, <&kp CAPS>;
         };
 
-        // Left Shift: tap/hold = Shift, double-tap = Caps Lock (QMK-style).
+        // Left Shift: tap/hold = Shift, double-tap = Caps Word (QMK-style;
+        // auto-exits on space/punctuation, continues on letters/numbers/_/bspc/del).
         TD_LSHFT_CAPS: TD_LSHFT_CAPS {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_LSHFT_CAPS";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LSHFT>, <&kp CAPS>;
+            bindings = <&kp LSHFT>, <&caps_word>;
         };
     };
 
