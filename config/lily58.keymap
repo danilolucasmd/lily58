@@ -7,6 +7,12 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+
+// Match QMK's default mouse-key feel. These override pointing.h's defaults
+// (600 / 10) and must be defined BEFORE the include below.
+// Max cursor speed (units/sec): QMK ~= MOVE_DELTA(8) * MAX_SPEED(10) * 50 reports/sec.
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 4000
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/ext_power.h>
 
