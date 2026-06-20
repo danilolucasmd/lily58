@@ -8,23 +8,16 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-// Match QMK's default mouse-key feel. These override pointing.h's defaults
-// (600 / 10) and must be defined BEFORE the include below.
-// Max cursor speed (units/sec): QMK ~= MOVE_DELTA(8) * MAX_SPEED(10) * 50 reports/sec.
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 4000
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+// Mouse-key speed. These override pointing.h's defaults (move 600 / scroll 10)
+// and MUST be defined before the include below (pointing.h guards with #ifndef).
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 3000   // max cursor speed (units/sec) — raise to go faster
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20     // scroll speed
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/ext_power.h>
 
-// Match QMK's default mouse-key acceleration: ~600ms to reach max, linear ramp.
+// Time held before the cursor reaches full speed (acceleration ramp).
 &mmv {
-    time-to-max-speed-ms = <600>;
-    acceleration-exponent = <1>;
-};
-
-&msc {
-    time-to-max-speed-ms = <600>;
-    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <500>;
 };
 
 / {
