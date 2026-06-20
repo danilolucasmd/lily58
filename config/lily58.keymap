@@ -10,6 +10,17 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+// Match QMK's default mouse-key acceleration: ~600ms to reach max, linear ramp.
+&mmv {
+    time-to-max-speed-ms = <600>;
+    acceleration-exponent = <1>;
+};
+
+&msc {
+    time-to-max-speed-ms = <600>;
+    acceleration-exponent = <1>;
+};
+
 / {
     behaviors {
         HT_LAYER2: HT_LAYER2 {
