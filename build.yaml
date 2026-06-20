@@ -16,13 +16,10 @@ include:
   - board: nice_nano_v2
     shield: settings_reset
 
-  - board: nice_nano_v2
-    shield: lily58_dongle
-
+  # Left half = central/master (ZMK's built-in lily58 shield sets ROLE_CENTRAL=y)
   - board: nice_nano_v2
     shield: lily58_left nice_oled
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    
+
+  # Right half = peripheral
   - board: nice_nano_v2
     shield: lily58_right nice_oled
-    cmake-args: -DCONFIG_ZMK_SPLIT=y -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
