@@ -20,6 +20,11 @@
     time-to-max-speed-ms = <300>;
 };
 
+// Match QMK Caps Word: also keep caps active on the "-" key (ZMK breaks on it by default).
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BACKSPACE DELETE>;
+};
+
 / {
     behaviors {
         HT_LAYER2: HT_LAYER2 {
