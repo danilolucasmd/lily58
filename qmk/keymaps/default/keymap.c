@@ -92,6 +92,36 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     )
 };
 
+// Caps Word: control which keys continue it and which break it.
+// Unlike QMK's default, KC_MINS is NOT shifted here, so '-' and '_' type
+// literally while Caps Word stays active (matches the ZMK continue-list).
+bool caps_word_press_user(uint16_t keycode) {
+    switch (keycode) {
+        // Continue Caps Word, WITH shift applied (letters get capitalized).
+        case KC_A ... KC_Z:
+            add_weak_mods(MOD_BIT(KC_LSFT));
+            return true;
+
+        // Continue Caps Word, WITHOUT shifting (typed as-is).
+        case KC_1 ... KC_0:
+        case KC_MINS:
+        case KC_UNDS:
+        case KC_BSPC:
+        case KC_DEL:
+            return true;
+
+        // Holding Shift must NOT break Caps Word — needed so Shift+'-' types
+        // '_' (and any other shifted char) while Caps Word stays active.
+        case KC_LSFT:
+        case KC_RSFT:
+            return true;
+
+        // Anything else breaks Caps Word.
+        default:
+            return false;
+    }
+}
+
 // Rotate OLED display
 oled_rotation_t oled_init_user(oled_rotation_t rotation) {
 	if (!is_keyboard_master()) return OLED_ROTATION_180;
