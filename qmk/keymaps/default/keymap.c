@@ -55,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
     * | TRNS |      |      | PgDn |      |      |-------.    ,-------| Left | Down |  Up  |Right |      |      |
     * |------+------+------+------+------+------|       |    |       |------+------+------+------+------+------|
-    * | TRNS |      |      |      |      |      |      |    |       |      | Mute | Vol- | Vol+ |      |      |
+    * | TRNS |      |      |      |      |      |      |    |       | Play | Mute | Vol- | Vol+ |      |      |
     * `-----------------------------------------/       /     \      \-----------------------------------------'
     *                   | TRNS |      |      |         |       |      |      | TRNS |
     *                   |      |      |      |         |       |      |      |      |
@@ -65,7 +65,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_TRNS, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,                     KC_TRNS, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR, KC_EQL,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,                   KC_TRNS, KC_PGUP, KC_TRNS, KC_TRNS, KC_UP,   KC_PLUS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_PGDN, KC_TRNS, KC_TRNS,                   KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_MPLY, KC_MUTE, KC_VOLD, KC_VOLU, KC_TRNS, KC_TRNS,
                                 KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS
     ),
 
